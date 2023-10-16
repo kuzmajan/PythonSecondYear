@@ -14,4 +14,4 @@ if __name__ == '__main__':
         b = random.random() * 2 - 1
         if dlugosc(a, b) <= 1:
             licznik += 1
-    print(4 * licznik/n)
+    print(4 * licznik / n)
