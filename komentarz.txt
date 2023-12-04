@@ -1,0 +1,14 @@
+kompilcaja za pomocą komendy
+/usr.bin.time -v python3 ulamek.py 2>&1 1>/dev/null | grep -E "wall|Max"
+
+dla n równego milion, oraz k równego 10 milionów mamy:
+                    Bez użycia slots        Z użyciem slots
+Czas wykonania:     15,34s                  14,85s
+Użycie pamięci:     250024(kbytes)          193428(kbytes)
+Mamy zatem bardzo niewielką poprawę w czasie (0,49s), natomiast dużą poprawę w użyciu pamięci (aż o 22,6% lepiej).
+
+Dla 10 milionów ułamków oraz 10 milionów operacji mamy:
+                    Bez użycia slots        Z użyciem slots
+Czas wykonania:     20,69s                  18,92s
+Użycie pamięci:     1657560(kbytes)         1186916(kbytes)
+Zatem dla większej liczby ułamków uzyskujemy jeszcze większy zysk, o 1,77s szybsze wykonanie oraz o 32,5% lepsze wykorzystanie pamięci.     
